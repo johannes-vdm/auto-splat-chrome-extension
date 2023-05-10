@@ -5,6 +5,8 @@ const updateBtn = document.querySelector("#update");
 
 console.log(updateBtn);
 if (updateBtn && updateBtn.textContent.trim() === "Enable Dev Mode") {
+  console.log("YES")
+  updateBtn.click()
   // Create a new MutationObserver
   const observer = new MutationObserver((mutationsList) => {
     // Check if the button text has changed
@@ -23,6 +25,9 @@ if (updateBtn && updateBtn.textContent.trim() === "Enable Dev Mode") {
 
   // Observe changes to the text content of the button
   observer.observe(updateBtn, { characterData: true, subtree: true });
+} else if (updateBtn.textContent.trim() === "Update Content") {
+  // updateBtn.click()
+  console.log("Content updated")
 } else {
   console.log("Button not found or text is not 'Enable Dev Mode'");
 }
