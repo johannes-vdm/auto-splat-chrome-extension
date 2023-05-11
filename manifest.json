@@ -9,6 +9,14 @@
     "48": "images/pine.png",
     "128": "images/pine.png"
   },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "permissions": [
+    "notifications",
+    "storage",
+    "alarms"
+  ],
   "content_scripts": [
     {
       "matches": [
