@@ -34,7 +34,7 @@ function addEventToList(event: string) {
 // });
 
 // NOTE Call the function every 30 minutes using setInterval()
-setInterval(clickUpdateBtn, 30 * 60 * 10);
+setInterval(clickUpdateBtn, 30 * 60 * 1000);
 
 // NOTE Add an event listener to the document object for the 'DOMContentLoaded' event
 document.addEventListener("DOMContentLoaded", overrideAlert);
