@@ -1,4 +1,4 @@
-const updateBtn = document.querySelector("#update") as HTMLButtonElement;
+const updateBtn = document.querySelector("#update");
 const eventList = document.createElement("ul");
 document.body.appendChild(eventList);
 
@@ -12,7 +12,7 @@ function clickUpdateBtn() {
 }
 
 function overrideAlert() {
-  window.alert = function (message: string) {
+  window.alert = function (message) {
     clickUpdateBtn();
     // NOTE Auto accept alerts
     addEventToList("ALERT OVERWRITE");
@@ -20,7 +20,7 @@ function overrideAlert() {
   };
 }
 
-function addEventToList(event: string) {
+function addEventToList(event) {
   const date = new Date();
   const time = date.toLocaleTimeString();
   const listItem = document.createElement("li");
