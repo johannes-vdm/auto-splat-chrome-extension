@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "Auto Splat",
   "description": "Automatically Splat Dev mode 🍍",
-  "version": "1.0",
+  "version": "1.3",
   "icons": {
     "120": "./assets/icon/pine.png"
   },
