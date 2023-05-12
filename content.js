@@ -2,22 +2,21 @@ const updateBtn = document.querySelector("#update");
 const eventList = document.createElement("ul");
 document.body.appendChild(eventList);
 
-
-addEventToList("LOADED");
+addEventToList("🚀AUTO SPLAT EXTENSION LOADED");
 
 function clickUpdateBtn() {
   if (updateBtn) {
     updateBtn.click();
-    console.log("CLICKED");
-    addEventToList("CLICKED");
+    addEventToList("AUTO CLICKED");
   }
 }
 
 function overrideAlert() {
   window.alert = function (message) {
-    console.log("ALERT CREATED");
     clickUpdateBtn();
-    return true;  // Return true to automatically accept the alert
+    // NOTE Auto accept alerts
+    addEventToList("ALERT OVERWRITE");
+    return true;
   }
 }
 
@@ -29,13 +28,13 @@ function addEventToList(event) {
   eventList.appendChild(listItem);
 }
 
-// Call the function after a short delay when the page is loaded
+// NOTE Call the function after a short delay when the page is loaded
 // window.addEventListener("load", function () {
 //   setTimeout(clickUpdateBtn, 100);
 // });
 
-// Call the function every 30 minutes using setInterval()
-setInterval(clickUpdateBtn, 30 * 60 * 1000);
+// NOTE Call th e function every 30 minutes using setInterval()
+setInterval(clickUpdateBtn, 30 * 60 * 10);
 
-// Add an event listener to the document object for the 'DOMContentLoaded' event
+// NOTE Add an event listener to the document object for the 'DOMContentLoaded' event
 document.addEventListener('DOMContentLoaded', overrideAlert);

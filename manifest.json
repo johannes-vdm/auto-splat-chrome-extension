@@ -4,10 +4,10 @@
   "description": "Automatically Splat Dev mode 🍍",
   "version": "1.0",
   "icons": {
-    "16": "images/pine.png",
-    "32": "images/pine.png",
-    "48": "images/pine.png",
-    "128": "images/pine.png"
+    "16": "./assets/icon/pine.png",
+    "32": "./assets/icon/pine.png",
+    "48": "./assets/icon/pine.png",
+    "128": "./assets/icon/pine.png"
   },
   "permissions": [
     "notifications",
