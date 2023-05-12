@@ -2,6 +2,9 @@ const updateBtn = document.querySelector("#update");
 const eventList = document.createElement("ul");
 document.body.appendChild(eventList);
 
+
+addEventToList("LOADED");
+
 function clickUpdateBtn() {
   if (updateBtn) {
     updateBtn.click();
