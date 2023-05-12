@@ -20,7 +20,7 @@
         "http://localhost:7777/za-develop/*develop.jsp*"
       ],
       "js": [
-        "content.js"
+        "auto.ts"
       ]
     }
   ]

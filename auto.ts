@@ -1,4 +1,4 @@
-const updateBtn = document.querySelector("#update");
+const updateBtn = document.querySelector("#update") as HTMLButtonElement;
 const eventList = document.createElement("ul");
 document.body.appendChild(eventList);
 
@@ -12,15 +12,15 @@ function clickUpdateBtn() {
 }
 
 function overrideAlert() {
-  window.alert = function (message) {
+  window.alert = function (message: string) {
     clickUpdateBtn();
     // NOTE Auto accept alerts
     addEventToList("ALERT OVERWRITE");
     return true;
-  }
+  };
 }
 
-function addEventToList(event) {
+function addEventToList(event: string) {
   const date = new Date();
   const time = date.toLocaleTimeString();
   const listItem = document.createElement("li");
@@ -33,8 +33,8 @@ function addEventToList(event) {
 //   setTimeout(clickUpdateBtn, 100);
 // });
 
-// NOTE Call th e function every 30 minutes using setInterval()
+// NOTE Call the function every 30 minutes using setInterval()
 setInterval(clickUpdateBtn, 30 * 60 * 10);
 
 // NOTE Add an event listener to the document object for the 'DOMContentLoaded' event
-document.addEventListener('DOMContentLoaded', overrideAlert);
+document.addEventListener("DOMContentLoaded", overrideAlert);
